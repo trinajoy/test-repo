@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+:root {
+  --modal-duration: 1s;
+  --primary-color: #4267b2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  margin: 0;
+  transition: transform 0.3s ease;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  margin: 150px auto;
+  max-width: 100%;
+  width: 800px;
+}
+
+input[type="submit"] {
+  background-color: var(--primary-color);
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 14px;
+  width: 100%;
+}
+
+input[type="text"] {
+  padding: 0px;
+  margin: 0;
+}
+
+.content-description input[type="text"] {
+  outline: 0;
+  border: none;
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal-container.show-modal {
+  display: block;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 500px;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-header {
+  color: #000;
+  padding: 15px;
+  border-bottom: 1px solid #99a8b2;
+}
+
+.modal-header h3 {
+  margin: 0;
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.modal-form .profile-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.modal-form .profile-info .content {
+  margin-left: 10px;
+}
+
+.modal-form .profile-info .avatar img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+/* form inputs */
+
+.upload-container {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+  position: relative;
+}
+
+.upload-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.content-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3px 5px;
+  opacity: 0.6;
+}
+
+.content-description .mood {
+  color: grey;
+  font-size: 20px;
+}
+
+.modal-form .form-group {
+  margin: 3px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.modal-form label {
+  line-height: 2;
+  font-size: 14px;
+}
+
+.modal-form .form-input {
+  padding: 0 6px;
+  width: 80%;
+  height: 30px;
+}
+
+/* buttons */
+
+button:focus {
+  outline: none;
+}
+
+.cta-btn {
+  padding: 12px 30px;
+  font-size: 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  margin-top: 7px;
+}
+
+.close-btn {
+  background: #f0f0f0;
+  font-size: 25px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+}
+
+.close-btn-upload {
+  background: #f0f0f0;
+  font-size: 25px;
+  position: absolute;
+  top: 45px;
+  right: 10px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+}
+
+button i {
+  color: #888888;
+}
+
+/* select option */
+
+.sharing-type select option {
+  font-family: "Lato", sans-serif;
+}
+
+.modal-form .sharing-type {
+  margin: 5px;
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+.sharing-type select {
+  padding: 6px;
+  background-color: #f4f4f2;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.select-css {
+  display: block;
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #444;
+  line-height: 1.3;
+  padding: 1em 1.4em 0.5em 0.8em;
+  width: 85px;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+  border-radius: 0.5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background: url("./images/arrow.png") no-repeat;
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
+}
+.select-css::-ms-expand {
+  display: none;
+}
+
+.select-css:hover {
+  border-color: #888;
+}
+.select-css:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: #222;
+  outline: none;
+}
+.select-css option {
+  font-weight: normal;
+}
+
+/* post message */
+#post-message {
+  display: block;
+  font-weight: lighter;
+  margin: 8px 0;
+}

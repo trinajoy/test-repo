@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+  integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S"
+  crossorigin="anonymous"
+/>
+  <link rel="stylesheet" href="style.css">
+  <title>Dev Test </title>
+<body>
+  
+  <div class="container">
+    <button class="cta-btn" id="open">Upload</button>
+  </div>
+
+     <!-- Modal -->
+     <div class="modal-container" id="modal">
+      <div class="modal">
+        <button class="close-btn" id="close">
+          <i class="fa fa-times"></i>
+        </button>
+        <div class="modal-header">
+          <h3>Create Post</h3>
+        </div>
+        <div class="modal-content">
+          <form class="modal-form" id="upload-form">
+            <div class="profile-info">
+              <div class="avatar"> 
+                <img id="avatar-link" src="https://randomuser.me/api/portraits/women/76.jpg" alt="user" />
+              </div>
+              <div class="content">
+                <div id="user-id" name="001">  Katrina Joy </div>
+                <div class="sharing-type" id="sharing-type">  
+                  <select class="sharing-list" id="sharing-list">
+                    <option value="public"> Public</option>
+                    <option value="private">Private</option>
+                    <option value="only friend">only friend</option>
+                  </select>
+                 </div>
+              </div>  
+            </div>
+
+            <div class="upload-container">
+              <button class="close-btn-upload" id="close">
+                <i class="fa fa-times"></i>
+              </button>
+              <div class="content-description">
+                <input
+                type="text"
+                id="description"
+                placeholder="Katrina, what are you thinking..?"
+                class="form-input"
+              />
+                <i class="mood far fa-smile"></i>
+              </div>
+
+              <img id="upload-link" src="https://i.picsum.photos/id/119/3264/2176.jpg?hmac=PYRYBOGQhlUm6wS94EkpN8dTIC7-2GniC3pqOt6CpNU" alt="user" />
+            </div>
+
+            <div class="form-group">
+              <label for="Location:"> Location</label>
+              <input
+                type="text"
+                id="location"
+                placeholder="Enter location"
+                class="form-input"
+              />
+            </div>
+            <div class="form-group">
+              <label for="Enter Key word:"> Key word</label>
+              <input
+                type="text"
+                id="keyword"
+                placeholder="Enter keyword"
+                class="form-input"
+              />
+            </div>
+            <input type="submit" value="Write a post" class="submit-btn" />
+            <span id="post-message"> </span>
+           
+          </form>
+        </div>
+      </div>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
